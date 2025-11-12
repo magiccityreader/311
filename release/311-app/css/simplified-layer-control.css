@@ -1,0 +1,220 @@
+/**
+ * Simplified Layer Control Panel CSS
+ * Clean, minimal styling for the Birmingham 311 layer control
+ */
+
+/* Main layer control container */
+.layer-control {
+    position: fixed;
+    top: 50px;
+    right: 345px;
+    background: #0d1117;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 8px;
+    color: #fff;
+    font-family: 'Helvetica Now Micro', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    z-index: 1000;
+    min-width: 200px;
+    max-width: 280px;
+    max-height: 70vh;
+    overflow: visible;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* Collapsed state - adjusted height */
+.layer-control.collapsed,
+#layer-control.collapsed {
+    max-height: 50px !important;
+    height: 50px !important;
+    overflow: hidden !important;
+    min-height: 50px !important;
+}
+
+/* Ensure content container is completely hidden when collapsed */
+.layer-control.collapsed #layer-control-content,
+#layer-control.collapsed #layer-control-content {
+    max-height: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Header section */
+.layer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.layer-header h3 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    flex: 1;
+}
+
+.date-range {
+    line-height: 1.4;
+    font-weight: normal;
+}
+
+/* Toggle button */
+.layer-toggle {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    user-select: none;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layer-toggle:hover {
+    color: #fff;
+}
+
+/* Collapsible content */
+.layer-content {
+    display: block; /* Start visible */
+    margin-top: 8px;
+}
+
+.layer-content.expanded {
+    display: block;
+}
+
+.layer-content.collapsed {
+    display: none !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 0 !important;
+}
+
+/* Statistics */
+.layer-stats {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #333;
+}
+
+.stat-item {
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 2px;
+    line-height: 1.2;
+}
+
+/* Categories */
+.layer-categories {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+/* Individual category items */
+.layer-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+.layer-item:hover {
+    background-color: #333;
+}
+
+.layer-item input[type="checkbox"] {
+    margin-right: 6px;
+    cursor: pointer;
+    accent-color: #007acc;
+    transform: scale(0.9);
+}
+
+.layer-item label {
+    color: #fff;
+    cursor: pointer;
+    flex: 1;
+    font-size: 11px;
+    line-height: 1.2;
+}
+
+/* Scrollbar styling */
+.layer-categories::-webkit-scrollbar {
+    width: 6px;
+}
+
+.layer-categories::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 3px;
+}
+
+.layer-categories::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 3px;
+}
+
+.layer-categories::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+/* Desktop positioning - ensure it overrides any conflicting styles */
+@media (min-width: 769px) {
+    .layer-control,
+    #layer-control {
+        top: 50px !important;
+        right: 345px !important;
+        left: auto !important;
+        width: 300px !important;
+        max-width: 300px !important;
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .layer-control {
+        top: 200px; /* Move up 5px from 205px */
+        right: 20px; /* Match hamburger menu right margin */
+        left: 20px; /* Increased to 20px */
+        width: auto;
+        max-width: none;
+        max-height: 80vh;
+    }
+    
+    /* Center the +/- control vertically in the header on mobile */
+    #layer-toggle-control {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        min-height: 32px;
+    }
+    
+    .layer-categories {
+        max-height: 60vh;
+    }
+}
+
+/* Print styles */
+@media print {
+    .layer-control {
+        display: none;
+    }
+}

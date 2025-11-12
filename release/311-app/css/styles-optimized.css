@@ -1,0 +1,1249 @@
+/* Optimized Birmingham Map Styles */
+
+/* Reset and base styles */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Now Micro', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #0d1117;
+    color: #f0f6fc;
+}
+
+/* Remove redundant zoom styles */
+html, body {
+    zoom: 100% !important;
+    -moz-transform: scale(1.0) !important;
+    -webkit-transform: scale(1.0) !important;
+    transform: scale(1.0) !important;
+}
+
+/* Map container */
+#map_5a5dcd89f74d5563ab698edfc46a7723 {
+    position: absolute;
+    width: calc(100% - 320px);
+    height: 100.0%;
+    left: 0.0%;
+    top: 0.0%;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 320px;
+    left: 0;
+}
+
+/* Leaflet container styling */
+.leaflet-container {
+    font-size: 1rem;
+    font-family: 'Helvetica Now Micro', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #2c2c2c;
+}
+
+/* Zoom controls positioning */
+.leaflet-control-zoom {
+    bottom: 20px !important;
+    left: 20px !important;
+    top: auto !important;
+    right: auto !important;
+    position: fixed !important;
+    z-index: 100 !important;
+    margin: 0 !important;
+}
+
+/* Ensure no Leaflet controls interfere with logo area */
+.leaflet-control-container {
+    pointer-events: none;
+}
+
+.leaflet-control-container .leaflet-control {
+    pointer-events: auto;
+}
+
+/* Prevent any controls from appearing in top-left logo area */
+.leaflet-control-container .leaflet-control-zoom {
+    /* Ensure zoom controls never appear in top-left area */
+    top: auto !important;
+    right: auto !important;
+}
+
+.leaflet-control-zoom a {
+    background-color: var(--bg-secondary) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-primary) !important;
+    width: 30px !important;
+    height: 30px !important;
+    line-height: 28px !important;
+}
+
+/* Copyright attribution styling */
+.leaflet-control-attribution {
+    font-size: 9px !important;
+    background: rgba(0, 0, 0, 0.7) !important;
+    color: #ccc !important;
+}
+
+/* MCR Logo */
+#mcr-logo {
+    position: fixed;
+    top: 22.5px;
+    left: 22.5px;
+    right: 370px; /* Match layer control right positioning (345px + 25px padding) */
+    z-index: 2000;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    /* Protect from Leaflet controls */
+    margin: 0;
+    padding: 18px;
+    /* Significant black drop shadow */
+    filter: drop-shadow(7.2px 7.2px 14.4px rgba(0, 0, 0, 1.0)) drop-shadow(3.6px 3.6px 7.2px rgba(0, 0, 0, 1.0));
+}
+
+/* Mobile responsive logo */
+@media (max-width: 768px) {
+    #collapsible-content.fully-collapsed {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+    #mcr-logo {
+    #collapsible-content.fully-collapsed {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+        top: 25px;
+    #collapsible-content.fully-collapsed {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+        left: 4.5px;
+    #collapsible-content.fully-collapsed {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+        right: 320px; /* Match layer control panel width */
+    #collapsible-content.fully-collapsed {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+        flex-direction: row;
+    #collapsible-content.fully-collapsed {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+        align-items: center;
+    #collapsible-content.fully-collapsed {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+        justify-content: flex-start;
+    #collapsible-content.fully-collapsed {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+        max-width: calc(100vw - 324.5px); /* 320px panel + 4.5px left margin */
+    #collapsible-content.fully-collapsed {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+        padding: 13.5px;
+    #collapsible-content.fully-collapsed {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+    }
+    #collapsible-content.fully-collapsed {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+    
+    .mcr-logo-img {
+        max-width: 90px;
+        max-height: 45px;
+        margin-right: 9px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+    
+    .header-text {
+        margin-top: 0;
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .volume-text {
+        font-size: 6.3px;
+        white-space: nowrap;
+    }
+    
+    .birmingham-title-text {
+        font-size: 32.4px;
+        white-space: nowrap;
+    }
+    
+    .database-clone-text {
+        font-size: 32.4px;
+        white-space: nowrap;
+    }
+    
+    .description-text-svg {
+        width: 225px;
+        height: auto;
+        white-space: nowrap;
+    }
+    
+    /* Mobile layer control positioning - below logo and text blocks */
+    #layer-control {
+        top: 195px !important;
+        left: 15px !important;
+        right: 15px !important;
+        width: auto !important;
+        max-width: none !important;
+        /* max-height removed to allow simplified layer control to manage height */
+    }
+}
+    .logo-container {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 10px;
+    }
+    
+    .header-text {
+        flex: 1;
+        margin-left: 0;
+        transform: translateX(-15px);
+    }
+    
+    #collapsible-content {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+    
+    #layer-control {
+        top: 200px !important; /* Move up 5px from 205px */
+        left: 20px !important; /* Increased to 20px */
+        right: 20px !important; /* Match hamburger menu right margin */
+    }
+
+.mcr-logo-img {
+    max-width: 204.93px; /* 227.7px - 10% */
+    max-height: 135px; /* 140px - 10% */
+    width: auto;
+    height: 135px;
+    background: none;
+    
+    
+    pointer-events: auto;
+    padding: 3.6px;
+    margin-right: 18px;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 8px;
+}
+
+.volume-text {
+n.header-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 4px;
+}
+
+.header-link {
+    font-family: "Helvetica Now Micro", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8.1px;
+    font-weight: 400;
+    color: #ffff00;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 2002;
+}
+
+.header-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.header-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+    font-family: 'Helvetica Now Micro', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+n.header-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 4px;
+}
+
+.header-link {
+    font-family: "Helvetica Now Micro", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8.1px;
+    font-weight: 400;
+    color: #ffff00;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 2002;
+}
+
+.header-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.header-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+    font-size: 8.1px;
+n.header-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 4px;
+}
+
+.header-link {
+    font-family: "Helvetica Now Micro", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8.1px;
+    font-weight: 400;
+    color: #ffff00;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 2002;
+}
+
+.header-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.header-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+    font-weight: 400;
+n.header-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 4px;
+}
+
+.header-link {
+    font-family: "Helvetica Now Micro", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8.1px;
+    font-weight: 400;
+    color: #ffff00;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 2002;
+}
+
+.header-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.header-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+    color: #ffff00;
+n.header-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 4px;
+}
+
+.header-link {
+    font-family: "Helvetica Now Micro", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8.1px;
+    font-weight: 400;
+    color: #ffff00;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 2002;
+}
+
+.header-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.header-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+    line-height: 1.2;
+n.header-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 4px;
+}
+
+.header-link {
+    font-family: "Helvetica Now Micro", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8.1px;
+    font-weight: 400;
+    color: #ffff00;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 2002;
+}
+
+.header-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.header-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+    margin-bottom: 8px;
+n.header-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 4px;
+}
+
+.header-link {
+    font-family: "Helvetica Now Micro", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8.1px;
+    font-weight: 400;
+    color: #ffff00;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 2002;
+}
+
+.header-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.header-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+    /* Force cache refresh - updated 20251011 */
+n.header-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 4px;
+}
+
+.header-link {
+    font-family: "Helvetica Now Micro", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8.1px;
+    font-weight: 400;
+    color: #ffff00;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 2002;
+}
+
+.header-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.header-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+}
+n.header-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 4px;
+}
+
+.header-link {
+    font-family: "Helvetica Now Micro", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8.1px;
+    font-weight: 400;
+    color: #ffff00;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 2002;
+}
+
+.header-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.header-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.birmingham-title-text {
+    font-family: 'Helvetica Now Pro Display XBlk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 213;
+    color: #ffffff;
+    letter-spacing: normal;
+    line-height: 0.9;
+    margin-bottom: 4.5px;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-synthesis: none;
+}
+
+.database-clone-text {
+    font-family: 'Helvetica Now Pro Display XBlk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 213;
+    color: #ffffff;
+    letter-spacing: normal;
+    line-height: 0.9;
+    margin-bottom: 10.8px;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-synthesis: none;
+}
+
+.description-text-svg {
+    width: 342px;
+    height: auto;
+    display: block;
+}
+
+/* Dark theme variables */
+:root {
+    --neon-cyan-primary: #00ffff;
+    --neon-cyan-secondary: #40e0d0;
+    --neon-cyan-tertiary: #7fffd4;
+    --neon-cyan-accent: #b0e0e6;
+    --neon-cyan-highlight: #e0ffff;
+    
+    --neon-magenta-primary: #ff00ff;
+    --neon-magenta-secondary: #ff69b4;
+    --neon-magenta-tertiary: #ffb6c1;
+    --neon-magenta-accent: #ffc0cb;
+    --neon-magenta-highlight: #ffe4e1;
+    
+    --neon-green-primary: #00ff00;
+    --neon-green-secondary: #32cd32;
+    --neon-green-tertiary: #90ee90;
+    --neon-green-accent: #98fb98;
+    --neon-green-highlight: #f0fff0;
+    
+    --neon-yellow-primary: #ffff00;
+    --neon-yellow-secondary: #ffd700;
+    --neon-yellow-tertiary: #ffeb3b;
+    --neon-yellow-accent: #fff59d;
+    --neon-yellow-highlight: #fffde7;
+    
+    --neon-orange-primary: #ff4500;
+    --neon-orange-secondary: #ff6347;
+    --neon-orange-tertiary: #ff7f50;
+    --neon-orange-accent: #ffa07a;
+    --neon-orange-highlight: #ffe4b5;
+    
+    /* Dark theme colors */
+    --bg-primary: #0d1117;
+    --bg-secondary: #161b22;
+    --bg-tertiary: #21262d;
+    --text-primary: #f0f6fc;
+    --text-secondary: #8b949e;
+    --border-color: #30363d;
+    --accent-color: #238636;
+}
+
+/* Dark theme body */
+.dark-theme {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* Leaflet control styling */
+.leaflet-control {
+    background: var(--bg-secondary) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+.leaflet-control-zoom a:hover {
+    background-color: var(--bg-tertiary) !important;
+}
+
+.leaflet-control-layers {
+    background: var(--bg-secondary) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+.leaflet-control-layers label {
+    color: var(--text-primary) !important;
+}
+
+.leaflet-control-layers span {
+    color: var(--text-primary) !important;
+}
+
+/* Popup styling */
+.leaflet-popup-content-wrapper {
+    background: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.leaflet-popup-tip {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+/* Loading indicator */
+#map-loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(22, 27, 34, 0.9);
+    color: #f0f6fc;
+    padding: 20px 30px;
+    border-radius: 8px;
+    z-index: 10000;
+    font-family: 'Helvetica Now Micro', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Error message styling */
+.error-message {
+    position: fixed;
+    top: 0px;
+    right: 20px;
+    background: #ff4444;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    z-index: 10000;
+    font-family: 'Helvetica Now Micro', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    #collapsible-content.fully-collapsed {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+    #map_5a5dcd89f74d5563ab698edfc46a7723 {
+    #collapsible-content.fully-collapsed {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+        width: 100%;
+    #collapsible-content.fully-collapsed {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+        right: 0;
+    #collapsible-content.fully-collapsed {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+    }
+    #collapsible-content.fully-collapsed {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+    
+    #map {
+        right: 0;
+    }
+    
+    .leaflet-control-zoom {
+        font-size: 18px;
+    }
+    
+    .leaflet-popup-content {
+        font-size: 14px;
+    }
+}
+
+/* Performance optimizations */
+.leaflet-container * {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.leaflet-tile {
+    will-change: transform;
+}
+
+/* Accessibility improvements */
+.leaflet-control-zoom a:focus,
+.leaflet-control-layers label:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Layer Control Panel - styles moved to simplified-layer-control.css */
+
+#layer-control h3 {
+    margin: 0 0 8px 0;
+    color: var(--text-primary);
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 6px;
+}
+
+#layer-control .layer-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+    cursor: pointer;
+    padding: 1px;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+    line-height: 1.2;
+}
+
+#layer-control .layer-item:hover {
+    background-color: var(--bg-tertiary);
+}
+
+#layer-control input[type="checkbox"] {
+    margin-right: 6px;
+    cursor: pointer;
+    accent-color: var(--accent-color);
+    transform: scale(0.9);
+}
+
+#layer-control label {
+    color: var(--text-primary);
+    cursor: pointer;
+    flex: 1;
+    font-size: 11px;
+}
+
+#layer-control .color-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    margin-left: 6px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#layer-control .heatmap-section {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border-color);
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+#layer-control .heatmap-section:hover {
+    background-color: var(--bg-tertiary);
+}
+
+#layer-control .heatmap-indicator {
+    background: linear-gradient(45deg, #00ffff, #ff0000);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Group headers for layer organization */
+#layer-control .group-header {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 4px 0 2px 0;
+    padding: 2px 0;
+    border-bottom: 1px solid var(--border-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+#layer-control .layer-stats {
+    margin-bottom: 4px;
+    padding-bottom: 2px;
+    font-size: 11px;
+    color: #888;
+    line-height: 1.2;
+}
+
+/* Toggle header styles */
+#layer-control .toggle-header {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    user-select: none;
+}
+
+#layer-control .toggle-header:hover {
+    background-color: var(--bg-tertiary);
+}
+
+#layer-control .toggle-header::after {
+    content: ' ▶';
+    float: right;
+    font-size: 10px;
+    transition: transform 0.2s ease;
+}
+
+#layer-control .toggle-header.expanded::after {
+    transform: rotate(90deg);
+}
+
+/* Toggle container styles */
+#layer-control .toggle-container {
+    max-height: 0px;
+    overflow: hidden !important;
+    transition: max-height 0.3s ease, opacity 0.3s ease !important;
+    opacity: 0;
+    display: block !important;
+}
+
+/* More specific selector for expanded state */
+#layer-control .toggle-container.expanded,
+div#layer-control .toggle-container.expanded,
+body #layer-control .toggle-container.expanded {
+    max-height: none !important;
+    overflow: visible !important;
+    opacity: 1 !important;
+    
+    transition: max-height 0.3s ease, opacity 0.3s ease !important;
+}
+
+/* Layer control scrolling */
+#layer-control {
+    max-height: none !important;
+    overflow: visible !important;
+    opacity: 1 !important;
+    opacity: 1 !important; min-height: 200px;
+    overflow-y: visible !important;
+}
+
+#layer-control::-webkit-scrollbar {
+    width: 6px;
+}
+
+#layer-control::-webkit-scrollbar-track {
+    background: var(--bg-tertiary);
+    border-radius: 3px;
+}
+
+#layer-control::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 3px;
+}
+
+#layer-control::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}
+
+
+
+/* Main content container styles */
+/* Main content container styles */
+#layer-control-content {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+}
+
+#layer-control-content.default {
+    overflow: auto;
+}
+
+#layer-control-content.expanded {
+    overflow: auto;
+}
+
+#collapsible-content.collapsed {
+    max-height: 60px !important; // Show header with date line
+    overflow: hidden;
+}
+
+/* Collapsible content styles */
+#collapsible-content {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+}
+
+#collapsible-content.default {
+    overflow: auto;
+}
+
+#collapsible-content.expanded {
+    overflow: auto;
+}
+
+#collapsible-content.collapsed {
+    max-height: 0px;
+    overflow: hidden;
+}
+
+/* Print styles */
+@media print {
+    .leaflet-control,
+    #layer-control {
+        display: none;
+    }
+    
+    #map-loading,
+    .error-message {
+        display: none;
+    }
+}
+
+/* Boundary layer blending mode */
+.leaflet-zoom-animated .leaflet-layer {
+    mix-blend-mode: multiply;
+    opacity: 0.5;
+}
+
+/* Override opacity for city boundary specifically */
+.leaflet-zoom-animated .leaflet-layer:has(path[stroke="magenta"]) {
+    opacity: 0.50 !important;
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 0px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 15000;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    background: rgba(13, 17, 23, 0.9);
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    backdrop-filter: blur(10px);
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: #f0f6fc;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    #collapsible-content.fully-collapsed {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+    .hamburger-menu {
+    #collapsible-content.fully-collapsed {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+        display: flex;
+        top: 20px; /* Move down 10px from 10px */
+    #collapsible-content.fully-collapsed {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+    }
+    #collapsible-content.fully-collapsed {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+    
+    #heatmap-sidebar {
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+    
+    #heatmap-sidebar.sidebar-open {
+        transform: translateX(0);
+        z-index: 15000 !important;
+    }
+}
+
+
+.header-link {
+    font-family: "Helvetica Now Micro", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8.1px;
+    font-weight: 400;
+    color: #ffff00;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 2002;
+}
+
+.header-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.header-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.header-links {
+    position: absolute;
+    top: 167px;
+    left: 22.5px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    z-index: 2001;
+    pointer-events: auto;
+}
+
+.header-link {
+    font-family: "Helvetica Now Micro", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8.1px;
+    font-weight: 400;
+    color: #ffff00;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 2002;
+}
+
+.header-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.header-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    #collapsible-content.fully-collapsed {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+    .header-links {
+        top: -5px; /* Move up 5px from 0px */
+        left: 17.5px; /* Move left 5px from 22.5px */
+    }
+    }
+    #collapsible-content.fully-collapsed {
+        max-height: 0 !important;
+        overflow: hidden;
+    }
+}
+
+/* Multiply blending mode for boundary layers and heatmap */
+.multiply-blend {
+    mix-blend-mode: multiply;
+}
+
+.boundary-label.multiply-blend {
+    mix-blend-mode: multiply;
+}
+
+/* Heatmap multiply blending */
+.leaflet-heatmap-layer {
+    mix-blend-mode: multiply;
+    opacity: 0.8;
+}
+
+/* Classic Windows Cursors */
+.leaflet-container {
+    cursor: auto;
+}
+
+.leaflet-container.leaflet-drag-target {
+    cursor: auto;
+}
+
+.leaflet-container.leaflet-zoom-box {
+    cursor: auto;
+}
+
+.leaflet-control-zoom a {
+    cursor: auto;
+}
+
+.leaflet-control-zoom a:hover {
+    cursor: auto;
+}
+
+.leaflet-popup-close-button {
+    cursor: auto;
+}
+
+.leaflet-popup-close-button:hover {
+    cursor: auto;
+}
+
+/* Map interaction cursors */
+.leaflet-interactive {
+    cursor: auto;
+}
+
+.leaflet-interactive:hover {
+    cursor: auto;
+}
+
+/* Loading state cursor */
+.loading {
+    cursor: auto;
+}
+
+/* Help cursor for info elements */
+.help-cursor {
+    cursor: auto;
+}
+
+/* Text selection cursor */
+.leaflet-container input,
+.leaflet-container textarea {
+    cursor: auto;
+}
+
+/* Resize cursors */
+.resize-horizontal {
+    cursor: auto;
+}
+
+.resize-vertical {
+    cursor: auto;
+}
+
+/* Location cursor for markers */
+.location-cursor {
+    cursor: auto;
+}
+
+/* Hand cursor for draggable elements */
+.hand-cursor {
+    cursor: auto;
+}
+
+.hand-cursor:active {
+    cursor: auto;
+}
+
+/* Background cursor for non-interactive areas */
+.background-cursor {
+    cursor: auto;
+}
+
+/* Alt cursor for alternative actions */
+.alt-cursor {
+    cursor: auto;
+}
+
+/* Handwrite cursor for drawing/editing */
+.handwrite-cursor {
+    cursor: auto;
+}
+
+/* Diagonal resize cursors */
+.resize-diagonal-1 {
+    cursor: auto;
+}
+
+.resize-diagonal-2 {
+    cursor: auto;
+}
+
+/* Ensure layer control panel can expand to contain all content */
+#layer-control {
+    height: auto !important;
+    min-height: 200px !important;
+    max-height: none !important;
+    overflow: visible !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+}
+
+
+#layer-control .toggle-container.expanded {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+}
+
